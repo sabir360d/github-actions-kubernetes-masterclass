@@ -385,7 +385,7 @@ The Kubernetes half of the course evolves this same app onto a cluster:
 - Run the cluster on EKS / GKE / AKS or local (kind / minikube).
 
 Same app. Same pipeline shape. Different runtime — and a lot more power.
-
+---
 ---
 
 ## Credits
