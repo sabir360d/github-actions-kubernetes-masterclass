@@ -13,8 +13,6 @@ To:
 
 * Kubernetes (kind)
 
-That is the real DevOps/Kubernetes learning outcome here.
-
 # SkillPulse - Same App, Different Runtime
 
 ## Hackathon Objective
@@ -92,11 +90,11 @@ SkillPulse successfully deployed on EC2 using Docker Compose.
 docker ps
 ```
 
-### Recommended Screenshot
+![T1.1](screenshots/T1.1.JPG)
 
-```text
-screenshots/docker-compose-deployment.png
-```
+![T1.2](screenshots/T1.2.JPG)
+
+![T1.4](screenshots/T1.4.JPG)
 
 ---
 
@@ -122,13 +120,7 @@ kubectl get pods -n skillpulse
 kubectl get svc -n skillpulse
 ```
 
-### Recommended Screenshots
-
-```text
-screenshots/k8s-pods.png
-
-screenshots/k8s-services.png
-```
+![T2.3](screenshots/T2.3.JPG)
 
 ---
 
@@ -147,11 +139,9 @@ GitHub Actions:
 * CI ✅
 * CD ✅
 
-### Recommended Screenshot
+![alt text](screenshots/Dry_run.JPG)
 
-```text
-screenshots/github-actions-success.png
-```
+![T3](screenshots/T3.JPG)
 
 ---
 
@@ -164,11 +154,9 @@ Images:
 * skillpulse-backend
 * skillpulse-frontend
 
-### Recommended Screenshot
 
-```text
-screenshots/dockerhub-images.png
-```
+![DockerHub](screenshots/DockerHub.JPG)
+
 
 ---
 
@@ -180,11 +168,9 @@ screenshots/dockerhub-images.png
 http://EC2_PUBLIC_IP
 ```
 
-### Recommended Screenshot
+![T1.3](screenshots/T1.3.JPG)
 
-```text
-screenshots/app-docker-runtime.png
-```
+![DHCk](screenshots/Docker_HCk.JPG)
 
 ---
 
@@ -194,11 +180,9 @@ screenshots/app-docker-runtime.png
 http://EC2_PUBLIC_IP:8888
 ```
 
-### Recommended Screenshot
+![T2.2](screenshots/T2.2.JPG)
 
-```text
-screenshots/app-k8s-runtime.png
-```
+![k8sHCk](screenshots/k8s_HCk.JPG)
 
 ---
 
@@ -219,8 +203,26 @@ Docker Compose → Kubernetes
 
 without changing the application itself.
 
-This reflects how modern DevOps workflows scale applications from simple container deployments to orchestrated Kubernetes environments.
+This reflects how modern DevOps workflows scale applications from simple container deployments to orchestrated Kubernetes environments demonstrating a practical end-to-end DevOps workflow used in modern production environments.
 
-```
+---
+
+# Challenges Faced
+Resource Constraints
+
+Initial deployment on t3.micro EC2 instance caused Kubernetes and Docker builds to stall because of memory limitations.
+
+# Solution
+
+Migrated to: c7i-flex.large
+
+This resolved:
+
+Docker build delays
+Kubernetes startup issues
+MySQL memory pressure
+
+---
+
 
 
